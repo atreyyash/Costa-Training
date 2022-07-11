@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hello, world!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ravi+Prakash&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="pic" id="left">
+            <img src="img/IMG_20200223_211200.jpg" alt="Random Pic">
+        </div>
+        <div class="logo">
+            <a href="https://www.bpitindia.com/"><img src="img/BPITLogo.webp" alt="BpitLogo"></a>
+        </div>
+        <div class="pic" id="right">
+            <img src="img/bpit.jpg" alt="Random Pic">
+        </div>
+    </div>
+    <div class="content">
+        <!-- <h1>Welcome to Our Team</h1> -->
+        <h1><span style="color:#000000; font-weight: bold;">Yash Atrey</span></h1>
+    </div>
+    <div>
+        <p><span class="bold">Name : </span>Yash Atrey</p>
+        <p>Course : Bachelors of Technology with specilization in computer science</p>
+        <p style="text-align: justify;"><span class="bold">Description : </span>B.Tech is one of the most in demand
+            field right now. It is becoming more and more popular as the rise in need of the skilled Graduates across
+            the country. This is also increased due to AtamNirbhar Bharat Compaign from our respected prime Miniter <a
+                href="https://img.gurugamer.com/resize/1200x-/2020/08/24/narendra-modi-56d9.jpg"
+                style="text-decoration: underline; cursor: pointer; color: navy;" class="bg">Shri. Narendra Modi</a>.
+            This degree is awarded to a candidate after completing four years of study in a particular field.</p>
+        <p><span class="bold">Batch : </span>2019 - 2023</p>
+        <p><span class="bold">Curent Year : </span>Third Year</p>
+        <div class="costa">
+            <p><span class="bold">Intern At : </span>Costa Cloud pvt. ltd.</p>
+            <a href="http://www.costacloud.com/index.html"><img src="img/costaLogo.png" alt="Costa Cloud Logo"
+                    id="costaLogo"></a>
+        </div>
+        <p><span class="bold">Technical Skills : </span>DSA, C/C++, HTML, CSS, JS</p>
+        <p><span class="bold">Address : </span>Delhi</p>
+    </div>
+    <div>
+        <button class="btn" onclick="darkMode()"><img src="img/dark.png" alt="" id="dark"></button>
+    </div>
+
+    <div id="time"></div>
+    <div>
+        <button class="btn-clk" onclick="toggleHide()"><img src="img/time.png" alt="" id="clk"></button>
+    </div>
+
+    <div id="name">Yash Atrey</div>
+    <div id="bpit">BPIT</div>
+
+    <script>
+        function darkMode() {
+            var bd = document.body;
+            bd.classList.toggle("dark-mode");
+        }
+
+        function updateTime() {
+            let date = new Date();
+            time.innerHTML = date.toDateString() + " Time:" + date.toLocaleTimeString();
+        }
+        setInterval(updateTime, 1000);
+
+        function toggleHide() {
+            // let btn = document.getElementById('btn');
+            let clk = document.getElementById('time');
+            if (time.style.display != 'none') {
+                time.style.display = 'none';
+            }
+            else {
+                time.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
